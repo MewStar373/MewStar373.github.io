@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+    <title>恐龙游戏</title>
+    <link rel="stylesheet" href="css/QAgame.css">
+    <link rel="stylesheet" href="css/返回.css">
+    <script src="js/QAgame.js" defer="deferS"></script>
+</head>
+<body style="background-image: url('./img/QAbac.jpg');">
+    <a class="returnbutton" href="index.html"><img src="img/返回按钮白.png" alt=""></a>
+    <div class="bgAll"> <!--游戏存放总框-->
+        <!-- 基础游戏页面 -->  
+        <div class="game-container">
+            <div class="score">得分: <span id="score">0</span></div>
+            <h1>这是什么恐龙？</h1>
+            <img id="dinosaur-image" class="dinosaur-image" src="" alt="恐龙图片">
+            <div class="options-container" id="options"></div>
+        </div>
+
+        <div id="result-page">
+            <h2>游戏结束！</h2>
+            <p>你的最终得分是: <span id="final-score">0</span> 分</p>
+        </div>
+    </div>
+    
+</body>
+</html>

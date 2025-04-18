@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="css/返回.css">
+    <link rel="stylesheet" href="./css/商品详细页.css">
+    <script src="./js/商品详细页.js" defer="defer"></script>
+</head>
+<body>
+    <a class="returnbutton" href="./商城主页.html"><img src="img/返回按钮黑.png" alt=""></a>
+    <div class="product-container">
+        <div class="product-main">
+            <!-- 左边商品图 -->
+            <div class="product-gallery">
+                <img src=".img/恐龙科普图书/科普图书1 (2).jpg" alt="商品主图" class="main-image">
+            </div>
+
+            <!-- 右边商品信息 -->
+            <div class="product-info">
+                <h1 class="product-title">发现恐龙3D立体游戏书幼儿1-3-6-9岁趣味翻翻书科普百科全书恐龙立体书翻翻书百科全书儿童宝宝推拉书科普绘本故事书恐龙书籍</h1>
+                
+                <div class="price-section">
+                    <span class="price">¥48.00</span>
+                    <span class="original-price">¥89.00</span>
+                </div>
+
+                <div class="delivery-info">
+                    <p>
+                        <span>48小时内发货</span>
+                        <span class="delivery-location">发货地：广东·江门</span>
+                    </p>
+                </div>
+
+                <!-- 新增的保障信息 -->
+                <div class="guarantee-info">
+                    <p class="guarantee-text">
+                        <span>保障资质：</span>
+                        <span>大促降价</span>
+                        <span class="guarantee-separator">|</span>
+                        <span>假一赔四</span>
+                        <span class="guarantee-separator">|</span>
+                        <span>七天无理由</span>
+                    </p>
+                </div>
+
+                <div class="quantity-select">
+                    <span class="quantity-label">数量</span>
+                    <div class="quantity-input">
+                        <button class="qty-btn">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="99">
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="action-btns">
+                    <button class="cart-btn">加入购物车</button>
+                    <button class="buy-btn">立即购买</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
