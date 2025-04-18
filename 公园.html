@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+    <link rel="stylesheet" href="./css/GongYuan.css">
+    <link rel="stylesheet" href="css/返回.css">
+    <link rel="stylesheet" type="text/css" href="./css/new_file.css" />
+    <title>公园</title>
+    <style>
+        /* 模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* 模态框内图片样式 */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* 关闭按钮样式 */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script src="./js/jquery.min.js" defer="defer" type="text/javascript" charset="utf-8"></script>
+<script src="./js/new_file.js" defer="defer" type="text/javascript" charset="utf-8"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // 获取游览图元素
+        const tourMap = document.querySelector('.youlan .map');
+        // 获取模态框元素
+        const modal = document.getElementById('myModal');
+        // 获取模态框内图片元素
+        const modalImg = document.getElementById('img01');
+        // 获取关闭按钮元素
+        const closeBtn = document.querySelector('.close');
+
+        // 为游览图添加点击事件监听器
+        tourMap.addEventListener('click', function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+
+        // 为关闭按钮添加点击事件监听器
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+
+        // 点击模态框外部区域关闭模态框
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+
+<body>
+    <div class="fbox"> <!--放置整个页面的内容-->
+        <a class="returnbutton" href="index.html"><img src="img/返回按钮白.png" alt=""></a>
+        <!--轮播图-->
+        <div class="out">
+            <ul>
+                <li class="images"> <!--第一张图-->
+                    <img src="img/GYfmt1.png">
+                </li>
+                <li class="images">
+                    <img src="img/GYfmt2.png">
+                </li>
+                <li class="images">
+                    <img src="img/GYfmt3.png">
+                </li>
+            </ul>
+            <p class="anNiu" id="anNiu1" onclick="dianJi(0)">&lt;</p>
+            <p class="anNiu" id="anNiu2" onclick="dianJi(1)">&gt;</p>
+            <ol>
+                <li class="anNius" onclick="anNius(0)"></li>
+                <li class="anNius" onclick="anNius(1)"></li>
+                <li class="anNius" onclick="anNius(2)"></li>
+                <!--<li class="anNius" onclick="anNius(3)"></li>
+                <li class="anNius" onclick="anNius(4)"></li> -->
+            </ol>
+        </div>
+        <!--园区介绍-->
+        <div class="yuanqu bigcard">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span style="font-size: 43px; font-family: 宋体; font-weight: bold;">中国恐龙园</span>
+                </div>
+                <img src="./img/GYhpt.png">
+                <p><span>江苏省常州市新北区河海东路 60 号</span><br>
+                    <span>始建于 1997 年 9 月，2000 年 9 月建成开放</span><br>
+                    <span>占地约 0.4 平方千米</span>
+                </p>
+            </div>
+        </div>
+        <!-- 主题区域 -->
+        <div class="zhuti bigcard">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>主题区域</span>
+                </div>
+                <img src="./img/GY1_2.png">
+                <p><span>中国恐龙博物馆 ></span>中国恐龙园收藏了大量珍贵的恐龙化石，且拥有景点体验游乐项目，让游客仿若穿越侏罗纪。该园区建筑造型独特，以恐龙动态和侏罗纪生物元素重构，馆内主要科普侏罗纪时代恐龙知识，周边还有旦宝的魔法屋、5D 电影 — 圣殿骑士等项目。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GYfkkl.png">
+                <p><span>< 疯狂恐龙人</span>整个区域充满潮流涂鸦风格，以 “布鲁克林大街”“嘻哈广场”“弗瑞角” 为主题打造场景，全区域全场景涂鸦十分吸睛。这里依托原创 IP，蒸汽朋克风舞台极具特色，在夏季国际狂欢节期间，会举办精彩表演，将潮流文化与恐龙元素巧妙结合，为游客带来活力四射的娱乐体验。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GY2_2.jpg">
+                <p><span>库克苏克 ></span>库克苏克集中了众多高科技和恐龙主题惊险项目，如翼飞冲天、水火动力、通天塔等。其中水火动力可将游客提升到 13 米高空后座椅波浪式滚动；通天塔能让游客在几秒内弹射到 80 米高空再落回原处。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GYmxg.jpg">
+                <p><span>< 冒险港</span>坐落于园区南入口，是园内购物集中地，满是恐龙主题商品。有逼真多样的恐龙玩具，如玩偶、能动模型，部分带互动功能；还有服饰、文具、饰品等周边，均印恐龙元素图案，营造浓厚恐龙文化购物氛围。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GY2_3.jpg">
+                <p><span>鲁布拉 ></span>鲁布拉主要游玩项目有疯狂火龙钻、雷龙过山车等。疯狂火龙钻是中国顶级高空摇摆项目，可旋转、滑行、失重，被称为 “亚洲第一大摆锤”；雷龙过山车是弧形摆动的吊车娱乐项目，启动后速度快，轨道曲折。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GY2_4.jpg">
+                <p><span>< 梦幻庄园</span>游乐设施丰富多样，造型可爱。旋转波板糖将飞椅设计成糖果模样，扭蛋塔可上升观景。阿细神奇实验课、阿细奇妙屋等互动项目，让孩子在玩乐中学习知识。鲁尼镇、大都会等区域，有旋转飞椅、迷你穿梭等小型游乐项目，安全有趣。整个区域以柔和色彩、卡通恐龙形象装饰，充满童趣，是小朋友的欢乐天堂。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GY2_5.jpg">
+                <p><span>梦幻雨林 ></span>梦幻雨林有 4D 过山车、勇闯恐龙山等项目。4D 过山车是国内第一台，最高 79 米，5 吨重力加速度瞬间提速至 126 千米 / 小时，座位仓非固定，游客完全悬空。此外还有恐龙基因研究中心，以神秘恐龙孵化基地为主题。</p>
+            </div>
+        </div>
+        <!-- 配套措施 -->
+        <div class="peitao bigcard">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>配套设施</span>
+                </div>
+                <img src="./img/GY2_6.jpg">
+                <p><span>< 侏罗纪水世界</span>侏罗纪水世界紧邻中华恐龙园，夏季开放，拥有大型人工造浪池，以及飓风湾、悠闲谷等十多项水上极限项目。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/GY2_7.jpg">
+                <p><span>恐龙人俱乐部酒店 ></span>恐龙人俱乐部酒店位于主入口区，2016 年 10 月开业，配置了霸王龙洞穴、翼龙巢穴等多种恐龙主题房型，荣获 “常州市家庭教育亲子实践基地”“最具特色酒店” 等称号。</p>
+            </div>
+        </div>
+        <!-- 文化活动 -->
+        <div class="wenhua bigcard">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>文化活动</span>
+                </div>
+                <img src="./img/GYhuodong.png">
+                <p><span>恐龙文化节  （每年 3 至 6 月）</span>专题科普特展、趣味研学课堂<br>如 “龙归故里” 展览国宝级化石，“暴龙特展” 探索暴龙家族<br>
+                    <span>恐龙国际狂欢节  （每年 6 月至 8 月）</span>鲁布拉区巅峰水世界同期开放，设有多项水上项目<br>夜间开启狂欢模式，举办 “拉风狂欢”“泰狂欢” 等国际演出<br>
+                    <span>恐龙万圣季  （每年 10 月 4 日 至 11 月 10 日）</span>每年有不同故事主线，如 “魔龙归来，六军圣战” 等<br>2019 年结合鬼屋打造惊魂项目，带来惊悚体验</p>
+            </div>
+        </div>
+        <!-- 游览 -->
+        <div class="youlan bigcard">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>游览图</span>
+                </div>
+                <img class="map" src="./img/GYylt.png">
+            </div>
+        </div>
+        <!-- 导航 -->
+        <div class="daohang bigcard">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>导航图</span>
+                </div>
+                <a target="_blank" href="https://map.baidu.com/poi/%E4%B8%AD%E5%8D%8E%E6%81%90%E9%BE%99%E5%9B%AD/@13035178.356094904,3688152.463040697,5.9z?uid=b074ef23c2dce231ad31e5f5&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">
+                    <img class="location" src="./img/GYdht2.png"> <!--属性120倍数 - 照片app-->
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框 -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+</body>
+
+</html>    

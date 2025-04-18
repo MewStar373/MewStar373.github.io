@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+  <title>图片推荐</title>
+  <link rel="stylesheet" href="css/返回.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at center, #61C695 0%, #133114 100%); /*径向渐变*/
+      margin: 0;
+      display: flex; /*弹性容器*/
+      align-items: center;
+      justify-content: center; /*设置弹性容器为居中对齐*/
+      text-align: center;
+      color: #FFFFFF;
+      flex-direction: column; /*居中左右对齐*/
+    }
+
+   .fbox {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+   .fbox img {
+      width: 300px;
+      height: auto;
+      margin: 10px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+   .fbox img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+   .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+   .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+   .close:hover,
+   .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 存放一整个页面内容 -->
+  <a class="returnbutton" href="index.html"><img src="img/返回按钮白.png" alt=""></a>
+  <div class="fbox">
+    <img src="./img/原角龙VS迅猛龙.jpg" alt="原角龙VS迅猛龙">
+    <img src="./img/埃雷拉龙.jpg" alt="埃雷拉龙">
+    <img src="./img/恐龙1.png" alt="恐龙1">
+    <img src="./img/恐龙2.png" alt="恐龙2">
+    <img src="./img/恐龙世界.jpg" alt="恐龙世界">
+    <img src="./img/恐龙骑士.jpg" alt="恐龙骑士">
+    <img src="./img/脊背龙.jpg" alt="脊背龙">
+    <img src="./img/西方恶龙.jpg" alt="西方恶龙">
+    <img src="./img/西方飞龙.jpg" alt="西方飞龙">
+    <img src="./img/霸王龙.jpg" alt="霸王龙">
+    <img src="./img/霸王龙2.jpg" alt="霸王龙2">
+    <img src="./img/飞龙.jpg" alt="飞龙">
+    <!--<img src="./img/食草的甲龙.jpg" alt="食草的甲龙"> -->
+  </div>
+
+  <!-- 模态框 -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script>
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+    const images = document.querySelectorAll('.fbox img');
+
+    images.forEach(img => {
+      img.addEventListener('click', function () {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>
+    

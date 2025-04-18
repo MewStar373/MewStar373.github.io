@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+		<title>登录页面</title>
+        <link rel="stylesheet" href="./css/Loginpage.css">
+        <link rel="stylesheet" href="css/返回.css">
+	</head>
+	<body style="background-image: url('./img/LGbjt2_2.png');">
+        <a class="returnbutton" href="index.html"><img src="img/返回按钮纯白.png" alt=""></a>
+		<div class="content">
+            <div class="login-wrapper">
+                <div class="left-img">
+                    <div class="glass">
+                        <div class="tips">
+                            <div class="title">
+                                中世纪霸主
+                            </div>
+                            <h1>领略中世纪地球霸主的风范</h1>
+                            <span>恐龙对的地球的统治</span>
+                            <span>欢迎来到中世纪的地球霸主</span>                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-login-ferm">
+                    <div class="form-wrapper">
+                        <h1>登录页面</h1>
+                            <div class="input-items">
+                                <samp class="input-tips">
+                                    账号:
+                                </samp>
+                                <input type="text" id="username" class="inputs" placeholder="请输入您的账号"> 
+                            </div>
+                            <div class="input-items">
+                                <samp class="input-tips">
+                                    密码:
+                                </samp>
+                                <input type="password" id="password" class="inputs" placeholder="请输入您的密码">
+                                <samp class="forgot">忘记密码?</samp>
+                            </div>
+                            <button class="btn" onclick="login()">登录</button>
+                            <div class="siginup">
+                                <!-- <span>
+                                    没有账号         
+                                </span> --> 
+                                <span>
+                                    <a href="注册.html">注册  </a>      
+                                </span>
+                            </div>
+                            <div class="other-login">
+                                <div class="divder">
+                                    <samp class="line"></samp>
+                                    <span class="divider-text">or</span>
+                                    <samp class="line"></samp>
+                                </div>
+                                <div class="other-login-wrapper">
+                                    <div class="other-login-item">
+                                        <!-- 改为QQ与微信图片 -->
+                                        <img src="./img/LGPqq.png" alt="" style="width: 87px; height: 87px;">
+                                    </div>
+                                    <div class="other-login-item">
+                                        <img src="./img/LGPweixing.png" alt="" style="width: 75px; height: 75px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+        <script>
+            function login() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                // 假设默认账号密码
+                const defaultUsername = 'admin';
+                const defaultPassword = '123456';
+    
+                if (username === defaultUsername && password === defaultPassword) {
+                    // 验证通过，将用户名存储到本地存储
+                    localStorage.setItem('username', username);
+                    // 跳转到首页
+                    window.location.href = 'index.html';
+                } else {
+                    alert('账号或密码错误');
+                }
+            }
+        </script>
+	</body>
+</html>

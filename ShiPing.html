@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+    <title>高质量视频放送</title>
+    <link rel="stylesheet" href="css/返回.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ea;
+            padding: 20px;
+            background:linear-gradient(220.55deg, #61C695 0%, #133114 100%);
+        }
+
+        .category {
+            margin: 0 auto 30px;
+            width: 1200px;
+        }
+
+        .category h2 {
+            /*color: #2c3e50;*/
+            color:#ebf5f0;
+            font-family: 宋体;
+            font-size: 45px;
+            font-weight: bold;
+            margin-top: 5%;
+            margin-bottom: 18px;
+            border-bottom: 3px solid #95a5a6;
+            padding-bottom: 7px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .videos {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3%;
+        }
+
+        .videos:hover {
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+        }
+
+        .videos img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .videos .video-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .videos p {
+            margin-bottom: 10px;
+        }
+
+        .videos p:first-child {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .videos p span {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="returnbutton" href="../首页/首页.html"><img src="../返回/img/返回按钮白.png" alt=""></a>
+    <div class="category">
+        <h2>恐龙生态与生存</h2>
+        <div class="content">
+            <a class="videos" href="https://www.bilibili.com/video/BV1714y1b7ti?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/还原残酷恐龙世界.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>还原残酷恐龙世界</p>
+                    <p><span>还原</span>ID: xixi妈妈爱分享</p>
+                </div>
+            </a>
+            <a class="videos" href="https://www.bilibili.com/video/BV1Sm421N7rr?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/恐龙王朝的崛起.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>恐龙王朝的崛起</p>
+                    <p><span>还原</span>ID: 酷哥看世界</p>
+                </div>
+            </a>
+            <a class="videos" href="https://www.bilibili.com/video/BV1rV4y1A7Rk?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/史前星球失落的世界.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>史前星球失落的世界</p>
+                    <p><span>还原</span>ID: 纪录片之家字幕组</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="category">
+        <h2>恐龙趣味冒险</h2>
+        <div class="content">
+            <a class="videos" href="https://www.bilibili.com/video/BV1hQ4y1h7uQ?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/安迪的恐龙冒险.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>安迪的恐龙冒险</p>
+                    <p><span>趣味</span>ID: 圆滚滚与长条儿</p>
+                </div>
+            </a>
+            <a class="videos" href="https://www.bilibili.com/video/BV18t4y1i7AD?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/全景VR侏罗纪世界.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>全景VR 侏罗纪世界</p>
+                    <p><span>趣味</span>ID: 扬帆胜利</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="category">
+        <h2>恐龙科普知识</h2>
+        <div class="content">
+            <a class="videos" href="https://www.bilibili.com/video/BV1cJ4m1g7wp?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/最新恐龙比例对比.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>最新恐龙比例对比</p>
+                    <p><span>知识</span>ID: 波澜吴晓</p>
+                </div>
+            </a>
+            <a class="videos" href="https://www.bilibili.com/video/BV1rv4y1R7wz?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/恐龙历史年表.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>恐龙历史年表</p>
+                    <p><span>知识</span>ID: 环宇号飞船</p>
+                </div>
+            </a>
+            <a class="videos" href="https://www.bilibili.com/video/BV13Q4y1H7FS?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/三叠纪恐龙时代的开启.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>三叠纪恐龙时代的开启</p>
+                    <p><span>知识</span>ID: 路克纪录</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="category">
+        <h2>恐龙视听盛宴</h2>
+        <div class="content">
+            <a class="videos" href="https://www.bilibili.com/video/BV1fF411p7pf?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/恐龙高燃混剪.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>恐龙高燃混剪</p>
+                    <p><span>视听</span>ID: 暴虐XML</p>
+                </div>
+            </a>
+            <a class="videos" href="https://www.bilibili.com/video/BV11X4y1y7e1?vd_source=32d24666d1ea9b2146825bfb3ed3093e">
+                <img src="./img/来自地狱的恶魔.png" alt="Video Thumbnail">
+                <div class="video-info">
+                    <p>来自地狱的恶魔</p>
+                    <p><span>视听</span>ID: 鳄小七</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

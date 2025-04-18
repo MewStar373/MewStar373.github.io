@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/返回.css">
+    <link rel="stylesheet" href="./css/购物车.css">
+    <script src="./js/购物车.js" defer="defer"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>购物车</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>价格</th>
+                    <th>数量</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table-body">
+            </tbody>
+        </table>
+        <div class="checkout-container">
+            <span class="total-price">
+                总价: 
+                <span id="total-price" class="text-gray-600">¥0.00</span>
+            </span>
+            <button class="checkout-btn">结算</button>
+        </div>
+        <div class="shipping-info-container" id="shipping-info-container">
+            <label for="name">收货人姓名:</label>
+            <input type="text" id="name" placeholder="请输入收货人姓名">
+            <label for="address">收货地址:</label>
+            <input type="text" id="address" placeholder="请输入收货地址">
+            <label for="phone">联系电话:</label>
+            <input type="text" id="phone" placeholder="请输入联系电话">
+            <button id="confirm-btn" class="confirm-btn">确认并提交</button>
+        </div>
+    </div>
+</body>
+
+</html>    

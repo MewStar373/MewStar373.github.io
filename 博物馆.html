@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/CHZlogo.jpg" type="image/x-icon"> <!--logo-->
+    <link rel="stylesheet" href="./css/BoWuGuan2.css">
+    <link rel="stylesheet" href="css/返回.css">
+    <link rel="stylesheet" type="text/css" href="./css/new_file.css"/>
+    <title>博物馆</title>
+</head>
+<script src="./js/jquery.min.js" defer="defer" type="text/javascript" charset="utf-8"></script>
+<script src="./js/new_file.js" defer="defer" type="text/javascript" charset="utf-8"></script>
+
+<body>
+    <div class="fbox"> <!--放置整个页面的内容-->
+        <a class="returnbutton" href="index.html"><img src="img/返回按钮白.png" alt=""></a>
+        <!--轮播图-->
+        <div class="out"> 
+            <ul>
+                <li class="images"> <!--第一张图-->
+                    <img src="img/BWGfmt1.jpg" >
+                </li>
+                <li class="images">
+                    <img src="img/BWGfmt3.jpg" >
+                </li>
+                <li class="images">
+                     <img src="img/BWGfmt4.png" >
+                </li>
+            </ul>
+            <p class="anNiu" id="anNiu1" onclick="dianJi(0)"></p> 
+            <p class="anNiu" id="anNiu2" onclick="dianJi(1)"></p> 
+            <ol>
+                <li class="anNius" onclick="anNius(0)"></li>
+                <li class="anNius" onclick="anNius(1)"></li>
+                <li class="anNius" onclick="anNius(2)"></li>
+                <!--<li class="anNius" onclick="anNius(3)"></li>
+                <li class="anNius" onclick="anNius(4)"></li> -->
+            </ol>
+        </div>
+        <!--博物馆介绍-->
+        <div class="bowuguan"> 
+            <div class="content">
+                <div class="line-container">
+                    <hr><span style="font-size: 43px; font-family: 宋体; font-weight: bold;">中国古动物馆</span>
+                </div>
+                <img src="./img/BWGhpt.png">
+                <p><span>北京西城区西直门外大街 142 号</span><br>
+                    <span>总建筑面积 3000 平方米，展览面积近 2000 平方米</span><br>
+                    <span>是亚洲规模最大的自然科学类专题博物馆</span>
+                </p>
+            </div>
+        </div>
+        <!-- 展厅分布 -->
+        <div class="zhanting">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>展厅分布</span>
+                </div>
+                <img src="./img/BWGdqmd.png">
+                <p><span class="dabiaoti">地球脉动展厅 ></span>
+                    <span class="xiaobiaoti">展示内容：</span>
+                    以宇宙起源、地球形成及地球内外动力地质作用为主要内容，设有光电太阳系动态景观，展示宇宙的浩瀚，还有喜马拉雅山脉典型岩石标本，呈现地球的变迁。<br>
+                    <span class="xiaobiaoti">展品特色：</span>
+                    有支持大陆漂移学说的三叠纪二齿兽类水龙兽头骨化石，以及世界极少数三维保存的天山哈密翼龙蛋、已知时代最早的头尾完整保存的有颌鱼类奇迹秀山鱼化石等。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/BWGyghy.jpg">
+                <p><span class="dabiaoti">< 远古海洋展厅</span>
+                    <span class="xiaobiaoti">展示内容：</span>
+                    利用多媒体和场景复原技术，展现 “脊椎的现身”“颌的出现”“由水到陆” 的演变过程，让观众重温早期鱼类演化和四足动物登陆历程。<br>
+                    <span class="xiaobiaoti">展品特色：</span>
+                    陈列着大量远古海洋生物化石，如各种早期鱼类化石，生动呈现远古海洋生物的多样性和演化过程。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/BWGkldg.png">
+                <p><span class="dabiaoti">恐龙帝国展厅 ></span>
+                    <span class="xiaobiaoti">展示内容：</span>
+                    以中生代为背景，讲述恐龙从三叠纪出现、侏罗纪发展壮大到白垩纪分化，以及一支演化为鸟类的历程，呈现恐龙多样的生活场景。<br>
+                    <span class="xiaobiaoti">展品特色：</span>
+                    有世界唯一的董氏中华猛龙骨架标本，还有世界上脖子最长的恐龙中加马门溪龙的骨架模型，此外，展厅上空悬吊着沧龙、蛇颈龙、翼龙等模型，场景壮观。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/BWGfrxs.jpg">
+                <p><span class="dabiaoti">< 哺乳新生展厅</span>
+                    <span class="xiaobiaoti">展示内容：</span>
+                    展示新生代哺乳动物的辐射演化以及人类的崛起，详细解读哺乳动物各类群化石代表和人族成员直立行走过程。<br>
+                    <span class="xiaobiaoti">展品特色：</span>
+                    有陆地上生存过的最大哺乳动物、最早会飞的哺乳动物等化石标本，清晰呈现哺乳动物的进化脉络和人类起源发展的关键阶段。</p>
+            </div>
+            <div class="content">
+                <div class="line-container">
+                    <hr style="border-top: 1px solid #a5a5a5;">
+                </div>
+                <img src="./img/BWGmj.jpg">
+                <p><span class="dabiaoti">灭绝之殇展厅 ></span>
+                    <span class="xiaobiaoti">展示内容：</span>
+                    通过展示六十多种已灭绝生物的形象，阐述生物入侵对本土生物多样性的威胁，强调保护生物多样性的重要性。<br>
+                    <span class="xiaobiaoti">展品特色：</span>
+                    展示了多种因人类活动、环境变化等因素而灭绝的生物标本或模型，如渡渡鸟、袋狼等，以直观的方式警示观众保护生态环境的紧迫性。</p>
+            </div>
+        </div>
+        <!-- 重要藏品 -->
+        <div class="cangpin">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>重要藏品</span>
+                </div>
+                <p><span>中华猛龙骨架标本：</span>世界唯一的董氏中华猛龙骨架标本，整体长约 7.6 米，高度接近 3 米，生活在侏罗纪中晚期。<br>
+                    <span>中加马门溪龙：</span>世界上脖子最长的恐龙，属于大型植食性恐龙，体长可达 35 米，其脖子长度占到体长的近一半。<br>
+                    <span>奇迹秀山鱼：</span>已知时代最早的头尾完整保存的有颌鱼类，把完整有颌类的化石记录向前推进了 1100 万年。<br>
+                    <span>天山哈密翼龙蛋：</span>世界极少数三维保存的天山哈密翼龙蛋。<br>
+                    <span>埃氏马头骨：</span>世界上脸最长、个体最大的马 —— 埃氏马头骨化石标本。</p>
+            </div>
+        </div>
+        <!-- 指南 -->
+        <div class="zhinan">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>指南</span>
+                </div>
+                <img src="./img/BWGzhinan3.png">
+            </div>
+        </div>
+        <!-- 导航 -->
+        <div class="daohang">
+            <div class="content">
+                <div class="line-container">
+                    <hr><span>导航图</span>
+                </div>
+                <a target="_blank" href="https://map.baidu.com/search/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E5%8A%A8%E7%89%A9%E9%A6%86/@12976419.049522499,4800587.296553728,7.23z?querytype=s&da_src=shareurl&wd=%E4%B8%AD%E5%9B%BD%E5%8F%A4%E5%8A%A8%E7%89%A9%E9%A6%86&c=348&src=0&pn=0&sug=0&l=13&b=(13334893.14,3707015.61;13383789.14,3729543.61)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2">
+                    <img class="location" style="width: 100%;" src="./img/BWGdht2.png"> <!--属性125倍数 - 照片app-->
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
